@@ -63,13 +63,8 @@ def sortByIndex(a):
 #order of sorting is based on the value of the second argument: 'asc' or 'des'. 
 
 def sortByLength(t, order):
-    result = ()
-    if(order == 'asc'):
-        return sorted(t)
-    elif(order == 'des'):
-        for i in reversed(sorted(t, key=len)):
-            result += (i,)
-        return result
+    if order=='asc':
+       return tuple(sorted(t,key=len))
     else:
-        return FALSE
+       return tuple(sorted(t,key=len,reverse=True))
 
